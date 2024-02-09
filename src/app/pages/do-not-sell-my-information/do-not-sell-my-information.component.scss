@@ -1,0 +1,114 @@
+@import '../../styles/theme.scss';
+
+.snackbar-padding {
+    padding-top: 16px;
+}
+
+@media screen and (min-width: 0px) {
+    .information {
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5 {
+            margin: 0%;
+            padding: 1rem;
+        }
+
+        .mat-divider {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+        }
+
+        .r1 {
+            display: flex;
+            justify-content: center;
+            background-color: $light-blue;
+            border-top: 1px solid $dark-blue;
+            border-bottom: 1px solid $dark-blue;
+
+            .anosales-img {
+                padding: 1rem 0;
+                width: 100%;
+                border-radius: 1rem;
+            }
+
+            .information-title {
+                .h4 {
+                    text-align: start;
+                    padding: 1rem;
+                }
+            }
+
+            .c1 {
+                text-align: center;
+                width: max-content;
+
+                .form {
+                    border-radius: 1rem;
+                    background-color: #fff;
+                    box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 10%);
+                    padding: 1rem;
+                    margin: 1rem 0;
+
+                    .title-logo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 1rem;
+
+                        .h4 {
+                            margin: 0;
+                            margin-left: 8px;
+                        }
+                    }
+
+                    .mat-form-field {
+                        .mat-text-field {
+                            background-color: #fff;
+                        }
+
+                        .mat-label {
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .information {
+        .r1 {
+            .c1 {
+                .form {
+                    padding: 2rem;
+
+                    .mat-form-field {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .information {
+        .r1 {
+            .c1 {
+                padding: 2rem;
+
+                .form {
+                    padding: 3rem;
+                }
+            }
+        }
+    }
+}

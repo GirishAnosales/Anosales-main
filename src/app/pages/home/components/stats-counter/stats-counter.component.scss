@@ -1,0 +1,48 @@
+@import '../../../../styles/theme.scss';
+@import '../../../../styles/keyframes.scss';
+
+@media screen and (min-width: 0px) {
+    .counter {
+        text-align: center;
+        color: $color-white;
+        padding: 4rem;
+        background-image: url('../../../../../assets/images/pages/home/Sats 1 Edited.jpg');
+        background-position: center center;
+        background-size: cover;
+        border-top: 4px solid $color-yellow;
+        border-bottom: 4px solid $color-yellow;
+
+        .r1 {
+            border: 1px solid $secondary70;
+            box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            background-color: #00000080;
+
+            .r1c1,
+            .r1c2,
+            .r1c3,
+            .r1c4 {
+
+                .counter-one,
+                .counter-two,
+                .counter-three,
+                .counter-four {
+                    font: 800 40px Montserrat;
+                    padding: 2rem;
+                }
+
+                .h6 {
+                    text-align: center;
+                    padding-bottom: 2rem;
+                    color: $color-yellow;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .counter {
+        padding: 8rem;
+    }
+}

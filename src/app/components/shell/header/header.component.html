@@ -1,0 +1,118 @@
+<div class="container-fluid home">
+    <div class="row r1">
+        <div class="col-sm-6 r1c1">
+            <div class="logo" *ngIf="(isMediumLargeXLarge | async)">
+                <a routerLink="home" (click)="scrollToTop()">
+                    <img class="logo-img" src="../../../../assets/images/logo/AnosalesLogo4.png" alt="Anosales Logo">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6 r1c2">
+            <ng-container class="ng-container" *ngIf="(isMediumLargeXLarge | async)">
+                <button routerLink="home" (click)="scrollToTop()" class="button"
+                    style="font-size: small; margin: 0 1rem;" routerLinkActive="active" mat-stroked-button>Home</button>
+                <button [matMenuTriggerFor]="menu" class="button" style="font-size: small; margin: 0 1rem;"
+                    routerLinkActive="active" mat-stroked-button>Services</button>
+                <mat-menu class="mat-menu" #ServicesButton #menu="matMenu">
+                    <div class="mat-menu-content">
+                        <button routerLink="services/account-based-marketing" (click)="scrollToTop()"
+                            class="mat-menu-item" mat-menu-item>
+                            <h6 class="h6" style="font-size: small; margin: 0;">Account Based Marketing</h6>
+                        </button>
+                        <button routerLink="services/appointment-generation" (click)="scrollToTop()"
+                            class="mat-menu-item" mat-menu-item>
+                            <h6 class="h6" style="font-size: small; margin: 0;">Appointment Generation</h6>
+                        </button>
+                        <button (click)="scrollToTop()" [matMenuTriggerFor]="contentMenu" class="mat-menu-item"
+                            mat-menu-item>
+                            <h6 class="h6" style="font-size: small; margin: 0; ">Content</h6>
+                        </button>
+                        <button (click)="scrollToTop()" [matMenuTriggerFor]="dataManagementMenu" class="mat-menu-item"
+                            mat-menu-item>
+                            <h6 class="h6" style="font-size: small; margin: 0; ">Data Management Solutions</h6>
+                        </button>
+                        <button (click)="scrollToTop()" class="mat-menu-item" [matMenuTriggerFor]="intentMarketingMenu"
+                            mat-menu-item>
+                            <h6 class="h6" style="font-size: small; margin: 0;">Intent Marketing</h6>
+                        </button>
+                    </div>
+                </mat-menu>
+                <button routerLink="careers" (click)="scrollToTop()" class="button"
+                    style="font-size: small; margin: 0 1rem;" routerLinkActive="active"
+                    mat-stroked-button>Careers</button>
+                <button routerLink="about" (click)="scrollToTop()" class="button"
+                    style="font-size: small; margin: 0 1rem;" routerLinkActive="active"
+                    mat-stroked-button>About</button>
+                <button routerLink="contact" (click)="scrollToTop()" class="button"
+                    style="font-size: small; margin: 0 1rem;" routerLinkActive="active"
+                    mat-stroked-button>Contact</button>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<!-- Content Services Menu -->
+<mat-menu class="mat-menu" #contentMenu="matMenu">
+    <div class="mat-menu-content">
+        <button routerLink="services/content/content-creation" (click)="scrollToTop()" class="mat-menu-item"
+            mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">Content Creation</h6>
+        </button>
+        <button routerLink="services/content/content-marketing" (click)="scrollToTop()" class="mat-menu-item"
+            mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">Content Marketing</h6>
+        </button>
+        <button routerLink="services/content/content-syndication" (click)="scrollToTop()" class="mat-menu-item"
+            mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">Content Syndication</h6>
+        </button>
+    </div>
+</mat-menu>
+
+<!-- Data Management Solution Services Menu -->
+<mat-menu class="mat-menu" #dataManagementMenu="matMenu">
+    <div class="mat-menu-content">
+        <button routerLink="services/data-management-solutions/account-profiling" (click)="scrollToTop()"
+            class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0; ">Account Profiling</h6>
+        </button>
+        <button routerLink="services/data-management-solutions/custom-data-build-out" (click)="scrollToTop()"
+            class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">Custom data build out</h6>
+        </button>
+        <button routerLink="services/data-management-solutions/database-hygiene" (click)="scrollToTop()"
+            class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">Database Hygiene</h6>
+        </button>
+        <button routerLink="services/data-management-solutions/email-append" (click)="scrollToTop()"
+            class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0; ">Email Append</h6>
+        </button>
+        <button routerLink="services/data-management-solutions/technology-user-list" (click)="scrollToTop()"
+            class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">Technology User List</h6>
+        </button>
+    </div>
+</mat-menu>
+
+<!-- Intent Marketing Services Menu -->
+<mat-menu class="mat-menu" #intentMarketingMenu="matMenu">
+    <div class="mat-menu-content">
+        <button routerLink="services/intent-marketing/bant" (click)="scrollToTop()" class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">BANT</h6>
+        </button>
+        <button routerLink="services/intent-marketing/email-marketing" (click)="scrollToTop()" class="mat-menu-item"
+            mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0; ">Email Marketing</h6>
+        </button>
+        <button routerLink="services/intent-marketing/hql" (click)="scrollToTop()" class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">HQL</h6>
+        </button>
+        <button routerLink="services/intent-marketing/mql" (click)="scrollToTop()" class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0;">MQL</h6>
+        </button>
+        <button routerLink="services/intent-marketing/sql" (click)="scrollToTop()" class="mat-menu-item" mat-menu-item>
+            <h6 class="h6" style="font-size: small; margin: 0; ">SQL</h6>
+        </button>
+    </div>
+</mat-menu>

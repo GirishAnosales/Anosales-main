@@ -1,0 +1,170 @@
+@import '../../styles/theme.scss';
+
+.snackbar-padding {
+    padding-top: 16px;
+}
+
+@media screen and (min-width: 0px) {
+    .home {
+        .r1 {
+            min-height: 100vh;
+            height: 100%;
+
+            .r1c1 {
+                padding: 0%;
+
+                .img {
+                    height: 100%;
+                    background-image: url('../../../assets/images/pages/contact/Contact.jpg');
+                    background-size: cover;
+                    background-position: center center;
+                    border-bottom: 1rem solid $color-yellow;
+                }
+
+                .title-group {
+                    border-left: 8px solid $primary0;
+                    border-radius: 1rem;
+                    position: absolute;
+                    top: 50vh;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    background-color: #10526B80;
+                    padding: 1rem;
+                    margin: 1rem;
+
+                    .h1 {
+                        color: $color-white;
+                        text-align: center;
+                        border-radius: 1rem;
+                        padding: 0rem 1rem;
+                        font-weight: 900;
+                    }
+
+                    .h6 {
+                        color: $color-white;
+                        border-radius: 1rem;
+                        padding: 0rem 1rem;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+
+        .r2 {
+            min-height: 100vh;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: $primary10;
+            padding: 0 0 2rem 0;
+
+            .r2c2 {
+                padding: 2rem 2rem 2rem 0;
+
+                .h4 {
+                    font-weight: bold;
+                    background-color: $color-yellow;
+                    width: max-content;
+                    border-top-right-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
+            }
+        }
+
+        .r3 {
+            .r3c1 {
+                padding: 2rem 1rem;
+
+                .mat-card {
+                    box-shadow: 0px 0px 16px 0px #00000020;
+                    border-radius: 1rem;
+
+                    .mat-card-content {
+                        min-width: 300px;
+                        min-height: 300px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        .location,
+                        .address,
+                        .contact,
+                        .email {
+                            display: flex;
+                            align-items: center;
+
+                            .mat-icon {
+                                min-width: 64px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $secondary70;
+                            }
+
+                            .h6 {
+                                min-width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .r3c2 {
+                padding: 2rem 2rem 0 0;
+
+                .h4 {
+                    font-weight: bold;
+                    background-color: $color-yellow;
+                    width: max-content;
+                    border-top-right-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .home {
+        .r1 {
+            min-height: 60vh;
+
+            .r1c1 {
+                .title-group {
+                    width: max-content;
+
+                    .h1 {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+
+        .r2 {
+            .r2c2 {
+                .h4 {
+                    padding: 2rem;
+                    border-top-right-radius: 2rem;
+                    border-bottom-right-radius: 2rem;
+                }
+            }
+        }
+
+        .r3 {
+            .r3c2 {
+                .h4 {
+                    padding: 2rem;
+                    border-top-right-radius: 2rem;
+                    border-bottom-right-radius: 2rem;
+                }
+            }
+        }
+    }
+}

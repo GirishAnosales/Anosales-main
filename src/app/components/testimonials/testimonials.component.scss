@@ -1,0 +1,68 @@
+@import '../../styles/theme.scss';
+
+@media screen and (min-width: 0px) {
+    .home {
+        padding: 0%;
+
+        .r1 {
+            background-image: url('../../../assets/images/pages/home/Testimonail 1 Edited.jpg');
+            background-position: center center;
+            background-size: cover;
+            border-top: 4px solid $color-yellow;
+            border-bottom: 4px solid $color-yellow;
+
+            .r1c1,
+            .r1c2,
+            .r1c3 {
+                padding: 2rem;
+
+                .mat-card {
+                    background-color: #00000080;
+                    box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.25);
+                    border-radius: 0.5rem;
+                    backdrop-filter: blur(16px);
+                    border: 1px solid $secondary70;
+
+                    .mat-card-title {
+                        padding: 2rem;
+
+                        .mat-card-subtitle {
+                            color: $color-white;
+                            text-align: center;
+                            font-family: RedHatDisplay;
+                        }
+                    }
+
+                    .mat-card-content {
+                        font-style: italic;
+                        font-size: small;
+                        line-height: 2rem;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .home {
+        .r1 {
+
+            .r1c1,
+            .r1c2,
+            .r1c3 {
+                padding: 6rem 2rem;
+
+                .mat-card {
+                    .mat-card-title {
+                        .mat-card-subtitle {
+                            font-size: medium;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

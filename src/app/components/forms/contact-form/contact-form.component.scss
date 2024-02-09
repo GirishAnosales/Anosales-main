@@ -1,0 +1,53 @@
+@import "../../../theme/theme.scss";
+
+.snackbar-padding {
+    padding-top: 16px;
+}
+
+@media screen and (min-width: 0px) {
+    .form {
+        border-radius: 4px;
+        background-color: $secondary100;
+        box-shadow: 0px 0px 16px 1px #00000020;
+        padding: 1rem;
+        border-radius: 1rem;
+
+        .mat-form-field {
+            width: 100%;
+
+            .mat-label {
+                font-size: small;
+            }
+        }
+
+        .title-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 1rem;
+
+            .h5 {
+                margin: 0;
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .form {
+        padding: 2rem;
+
+        .mat-form-field {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .form {
+
+        padding: 2rem;
+    }
+}

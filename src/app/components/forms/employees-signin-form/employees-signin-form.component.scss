@@ -1,0 +1,77 @@
+@import url(../../../styles/keyframes.scss);
+
+.snackbar-padding {
+    padding-top: 16px;
+}
+
+@media screen and (min-width: 0px) {
+    .form {
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0px 0px 6px 0px #ddd;
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5 {
+            margin: 0%;
+            padding: 1rem;
+        }
+
+        .mat-form-field {
+            width: 100%;
+
+            .mat-text-field {
+                background-color: #fff;
+            }
+
+            .mat-label {
+                font-size: small;
+            }
+        }
+
+        .title-logo {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // padding-bottom: 1rem;
+
+            .img-people {
+                height: 32px;
+                width: 32px;
+            }
+
+            .h4 {
+                margin-bottom: 1rem;
+                // margin-left: 8px;
+                padding: 0%;
+                font-family: RedHatDisplay;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .contact-form {
+        padding: 2rem 0;
+
+        .form {
+            padding: 2rem;
+
+            .mat-form-field {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .contact-form {
+        .form {
+            padding: 2rem;
+        }
+    }
+}

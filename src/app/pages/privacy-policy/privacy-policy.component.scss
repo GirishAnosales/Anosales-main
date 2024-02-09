@@ -1,0 +1,39 @@
+@import '../../styles/theme.scss';
+
+.policy {
+    margin-bottom: 4rem;
+
+    .h1 {
+        text-align: center;
+        padding: 10rem 0;
+    }
+
+    .r1 {
+        background-color: $light-blue;
+        border-top: 1px solid $dark-blue;
+        border-bottom: 1px solid $dark-blue;
+
+        .c1 {
+            padding: 1rem;
+
+            .ul {
+                padding: 1rem;
+
+                .li-title {
+                    list-style-type: decimal;
+                    font-weight: bold;
+                    padding: 1rem;
+                }
+
+                .ul {
+                    padding: 1rem;
+
+                    .li-content {
+                        list-style-type: lower-alpha;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

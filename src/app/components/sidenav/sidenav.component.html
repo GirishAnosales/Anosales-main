@@ -1,0 +1,176 @@
+<div class="container-fluid home" *ngIf="isSmall | async">
+    <div class="row r1">
+        <div class="col-sm-12 r1c1">
+            <mat-sidenav-container class="mat-sidenav-container">
+                <mat-sidenav #drawer class="mat-sidenav" fixedInViewport
+                    [attr.role]="(isSmall | async) ? 'dialog' : 'navigation'" mode="over">
+
+                    <mat-nav-list class="mat-nav-list">
+
+                        <div class="close-button">
+                            <button class="mat-icon-button" type="button" aria-label="Toggle sidenav" mat-icon-button
+                                (click)="drawer.close()">
+                                <mat-icon class="mat-icon">close</mat-icon>
+                            </button>
+                        </div>
+
+                        <div class="label">
+                            <h6 class="h6">Pages</h6>
+                        </div>
+
+                        <a class="a" mat-list-item (click)="drawer.close()" href="home">
+                            <h6 class="h6">Home</h6>
+                        </a>
+                        <mat-divider class="mat-divider"></mat-divider>
+                        <a class="a" mat-list-item (click)="drawer.close()" href="careers">
+                            <h6 class="h6">Careers</h6>
+                        </a>
+                        <mat-divider class="mat-divider"></mat-divider>
+                        <a class="a" mat-list-item (click)="drawer.close()" href="about">
+                            <h6 class="h6">About</h6>
+                        </a>
+                        <mat-divider class="mat-divider"></mat-divider>
+                        <a class="a" mat-list-item (click)="drawer.close()" href="contact">
+                            <h6 class="h6">Contact</h6>
+                        </a>
+                        <mat-divider class="mat-divider"></mat-divider>
+                        <a class="a" mat-list-item (click)="drawer.close()" href="privacy-policy">
+                            <h6 class="h6">Privacy-Policy</h6>
+                        </a>
+
+                        <div class="label">
+                            <h6 class="h6">Services</h6>
+                        </div>
+
+                        <button class="mat-raised-button" mat-raised-button (click)="drawer.close()"
+                            routerLink="services/account-based-marketing">
+                            <h6 class="h6">Account Based Marketing</h6>
+                        </button>
+
+                        <button class="mat-raised-button" mat-raised-button (click)="drawer.close()"
+                            routerLink="services/appointment-generation">
+                            <h6 class="h6">Appointment Generation</h6>
+                        </button>
+
+                        <!-- Data Management Solution Service Accordion -->
+                        <mat-accordion class="mat-accordion">
+                            <mat-expansion-panel class="mat-expansion-panel" hideToggle>
+                                <mat-expansion-panel-header class="mat-expansion-panel-header">
+                                    <mat-panel-title class="mat-panel-title"> Data Management Solution
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/intent-marketing/account-profiling">
+                                        <h6 class="h6">Account Profiling</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/intent-marketing/custom-data-build-out">
+                                        <h6 class="h6">Custom data build out</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/intent-marketing/database-hygiene">
+                                        <h6 class="h6">Database Hygiene</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/intent-marketing/email-append">
+                                        <h6 class="h6">Email Append</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/intent-marketing/technology-user-list">
+                                        <h6 class="h6">Technology User List</h6>
+                                    </a>
+                                </mat-action-row>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+
+                        <!-- Intent Marketing Service Accordion -->
+                        <mat-accordion class="mat-accordion">
+                            <mat-expansion-panel class="mat-expansion-panel" hideToggle>
+                                <mat-expansion-panel-header class="mat-expansion-panel-header">
+                                    <mat-panel-title class="mat-panel-title"> Intent Marketing </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/data-management-solutions/bant">
+                                        <h6 class="h6">BANT</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/data-management-solutions/email-marketing">
+                                        <h6 class="h6">Email Marketing</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/data-management-solutions/hql">
+                                        <h6 class="h6">HQL</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/data-management-solutions/mql">
+                                        <h6 class="h6">MQL </h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/data-management-solutions/sql">
+                                        <h6 class="h6">SQL</h6>
+                                    </a>
+                                </mat-action-row>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+
+                        <!-- Content Service Accordion -->
+                        <mat-accordion class="mat-accordion">
+                            <mat-expansion-panel class="mat-expansion-panel" hideToggle>
+                                <mat-expansion-panel-header class="mat-expansion-panel-header">
+                                    <mat-panel-title class="mat-panel-title"> Content </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/content/content-creation">
+                                        <h6 class="h6">Content Creation</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/content/content-marketing">
+                                        <h6 class="h6">Content Marketing</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/content/content-syndication">
+                                        <h6 class="h6">Content Syndication </h6>
+                                    </a>
+                                </mat-action-row>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </mat-nav-list>
+                </mat-sidenav>
+
+                <mat-sidenav-content class="mat-sidenav-content">
+                    <mat-toolbar class="mat-toolbar">
+                        <h1 class="h1">Anosales</h1>
+                        <button class="mat-icon-button" type="button" aria-label="Toggle sidenav" mat-icon-button
+                            (click)="drawer.toggle()">
+                            <mat-icon class="mat-icon">menu</mat-icon>
+                        </button>
+                    </mat-toolbar>
+                </mat-sidenav-content>
+
+            </mat-sidenav-container>
+        </div>
+    </div>
+</div>

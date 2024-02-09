@@ -1,0 +1,53 @@
+@import '../../styles/theme.scss';
+
+@media screen and (min-width: 0px) {
+    .home {
+        padding: 0%;
+
+        .r1 {
+            background-color: #f4f4f4;
+
+            .industries-title {
+                width: 100%;
+
+                .h3 {
+                    text-align: start;
+                    padding: 1rem;
+                    padding-top: 3rem;
+                    padding-left: 3rem;
+                    margin: 0%;
+                    font-weight: bold;
+                }
+            }
+
+            .r1c1 {
+                padding: 4rem;
+
+                .r1c1r1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+                    padding: 1rem;
+
+                    .r1c1r1c1 {
+                        .img {
+                            height: 64px;
+                            width: auto;
+                            margin: auto;
+                        }
+                    }
+
+                    .r1c1r1c2 {
+                        width: auto;
+
+                        .p {
+                            padding: 1rem 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

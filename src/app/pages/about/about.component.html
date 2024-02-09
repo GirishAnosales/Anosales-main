@@ -1,0 +1,93 @@
+<div class="container-fluid home">
+
+    <!-- Taglines -->
+    <div class="row r1">
+        <div class="col-sm-12 r1c1">
+            <div class="img"></div>
+            <div class="title-group">
+                <h1 class="h1">About Us</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- History -->
+    <div class="row r2">
+        <div class="col-sm-12 r2c3">
+            <h4 class="h4">About</h4>
+        </div>
+        <div class="col-sm-6 r2c1">
+            <p class="p">Anosales is a
+                multidisciplinary demand generation,
+                data management and technology firm. Since
+                2010, we have been helping our clients to expand their customer base and increase revenue through our
+                impressive skill sets in our areas of expertise. We have been energizing sales and marketing activity of
+                businesses across the world and have assisted our clients to achieve remarkable revenue growth
+            </p>
+        </div>
+        <div class="col-sm-6 r2c2">
+            <img class="logo-img" src="../../../assets/images/logo/AnosalesLogo3.png" alt="Anosales Logo">
+        </div>
+    </div>
+
+    <!-- Quote -->
+    <div class="row r3">
+        <div class="col-sm-6 r3c1">
+            <h1 class="h1">"BE STRONG YOU NEVER KNOW WHO YOU ARE INSPIRING"
+            </h1>
+            <h6 class="h6">- Girish Misal, CEO, Anosales</h6>
+        </div>
+        <div class="col-sm-6 r3c2">
+            <img class="img" src="../../../assets/images/wallpapers/employees/girish-misal.jpg" alt="Girish Misal">
+        </div>
+    </div>
+
+    <!-- Taglines -->
+    <div class="row r4">
+        <div class="col-sm-3 r4c1" *ngFor="let data of r4">
+            <mat-card class="mat-card">
+                <mat-card-header class="mat-card-header">
+                    <mat-card-title class="mat-card-title">
+                        <h6 class="h6">{{data.title}}</h6>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- WHY ANOSALES? -->
+    <div class="row r5">
+        <div class="col-sm-12 r5c2">
+            <h4 class="h4">Why Anosales?</h4>
+        </div>
+        <div class="col-sm-4 r5c1" *ngFor="let data of r5">
+            <mat-card class="mat-card">
+                <mat-card-header class="mat-card-header">
+                    <mat-card-title class="mat-card-title">
+                        <h6 class="h6">{{data.title}}</h6>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- Industries we work with -->
+    <div class="row">
+        <div class="col-sm-12">
+            <app-industries-we-work-with></app-industries-we-work-with>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="row test">
+        <div class="col-sm-12 test-col">
+            <app-testimonials></app-testimonials>
+        </div>
+    </div>
+
+</div>

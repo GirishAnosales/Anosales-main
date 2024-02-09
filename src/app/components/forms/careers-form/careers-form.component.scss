@@ -1,0 +1,87 @@
+@media screen and (min-width: 0px) {
+    .careers-form {
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        .p {
+            margin: 0%;
+            padding: 1rem;
+            color: #034964;
+        }
+
+        .h4 {
+            border-bottom: 1px solid #eee;
+            font-family: RedHatDisplay;
+            background-color: #034964;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mat-dialog-content {
+            text-align: center;
+
+            .h6 {
+                padding: 1rem 0.1rem;
+            }
+
+            .r {
+                .c {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+
+                    .mat-form-field {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .r9 {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .careers-form {
+
+        .h4 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .mat-dialog-content {
+
+            .r {
+                .c {
+                    justify-content: flex-start;
+                }
+            }
+
+            .h6 {
+                text-align: start;
+                padding: 1rem 0.1rem;
+            }
+        }
+
+        .r9 {
+            display: flex !important;
+            flex-direction: row !important;
+
+            .c {
+                justify-content: center !important;
+            }
+        }
+    }
+}

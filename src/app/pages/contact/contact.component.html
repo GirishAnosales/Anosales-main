@@ -1,0 +1,65 @@
+<div class="container-fluid home">
+
+    <!-- Taglines -->
+    <div class="row r1">
+        <div class="col-sm-12 r1c1">
+            <div class="img"></div>
+            <div class="title-group">
+                <h1 class="h1">Contact</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="row r2">
+        <div class="col-sm-12 r2c2">
+            <h4 class="h4">Let's have a talk!</h4>
+        </div>
+        <div class="col-lg-4 r2c1">
+            <app-contact-form></app-contact-form>
+        </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="row r3">
+        <div class="col-sm-12 r3c2">
+            <h4 class=" h4">Contact Information</h4>
+        </div>
+        <div class="col-lg-4 r3c1" *ngFor="let data of r3">
+            <mat-card class="mat-card">
+                <mat-card-content class="mat-card-content">
+                    <div class="location">
+                        <mat-icon class="mat-icon">location_on</mat-icon>
+                        <h6 class="h6">{{data.location}}</h6>
+                    </div>
+                    <div class="address">
+                        <mat-icon class="mat-icon">contact_mail</mat-icon>
+                        <h6 class="h6">{{data.address}}</h6>
+                    </div>
+                    <div class="contact">
+                        <mat-icon class="mat-icon">smartphone</mat-icon>
+                        <h6 class="h6">{{data.contact}}</h6>
+                    </div>
+                    <div class="email">
+                        <mat-icon class="mat-icon">email</mat-icon>
+                        <h6 class="h6">{{data.email}}</h6>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- Industries we work with -->
+    <div class="row">
+        <div class="col-sm-12">
+            <app-industries-we-work-with></app-industries-we-work-with>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="row">
+        <div class="col-sm-12">
+            <app-testimonials></app-testimonials>
+        </div>
+    </div>
+</div>

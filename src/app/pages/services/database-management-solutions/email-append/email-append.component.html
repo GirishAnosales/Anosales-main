@@ -1,0 +1,56 @@
+<div class="container-fluid home">
+    
+    <div class="row r0">
+        <div class="col-lg-12 r0c1">
+            <h6 class="h6">{{emailAppendData[0].service_name}}</h6>
+        </div>
+    </div>
+
+    <div class="row r1">
+        <div class="col-sm-12 r1c1">
+            <div class="img"></div>
+        </div>
+    </div>
+
+    <div class="row r4">
+        <div class="col-lg-12 r4c1">
+            <h6 class="h6">{{emailAppendData[0].content_block2.content_block2_title}}</h6>
+        </div>
+    </div>
+
+    <div class="row r5">
+        <div class="col-lg-6 r5c1" *ngFor="let data of emailAppendData[0].content_block2.content_group">
+            <mat-card class="mat-card">
+                <mat-card-header class="mat-card-header">
+                    <mat-card-title class="mat-card-title">
+                        <h6 class="h6">{{data.title}}</h6>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="row r6">
+        <div class="col-lg-12 r6c1">
+            <h6 class="h6">{{emailAppendData[0].content_block3.content_block3_title}}</h6>
+        </div>
+    </div>
+
+    <div class="row r3">
+        <div class="col-lg-6 r3c1" *ngFor="let data of emailAppendData[0].content_block3.content_group">
+            <mat-card class="mat-card">
+                <mat-card-header class="mat-card-header">
+                    <mat-card-title class="mat-card-title">
+                        <h6 class="h6">{{data.title}}</h6>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

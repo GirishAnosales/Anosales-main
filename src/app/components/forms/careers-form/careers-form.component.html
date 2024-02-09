@@ -1,0 +1,126 @@
+<form class="careers-form">
+    <h4 class="h4" align="end" mat-dialog-title>Job Application</h4>
+    <div class="mat-dialog-content" mat-dialog-content>
+        <h6 class="h6">Personal Information</h6>
+        <div class="row r r1">
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">First Name</mat-label>
+                    <input type="text" name="firstName" matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Last Name</mat-label>
+                    <input type="text" name="lastName" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row r r2">
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Email</mat-label>
+                    <input type="email" name="email" matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Mobile</mat-label>
+                    <input type="tel" name="mobile" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row r r3">
+            <div class="col-sm-12 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Address</mat-label>
+                    <textarea type="text" name="address" matInput></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <h6 class="h6">Education and Qualification</h6>
+        <div class="row r r4">
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">University</mat-label>
+                    <input type="text" name="university" matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Degree</mat-label>
+                    <input type="text" name="degree" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row r r5">
+            <div class="col-sm-12 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Field of Study</mat-label>
+                    <input type="text" name="university" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <h6 class="h6">Work Experience</h6>
+        <div class="row r r6">
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Company Name</mat-label>
+                    <input type="text" name="university" matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Job Title</mat-label>
+                    <input type="text" name="degree" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row r r7">
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">Start Year</mat-label>
+                    <input type="date" name="university" matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 c">
+                <mat-form-field class="mat-form-field">
+                    <mat-label class="mat-label">End Year</mat-label>
+                    <input type="date" name="university" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <h6 class="h6">Technical Skills</h6>
+        <div class="row r r8">
+            <div class="col-sm-12 c">
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label>Add Skills</mat-label>
+                    <mat-chip-grid #chipGrid aria-label="Enter fruits">
+                        <mat-chip-row *ngFor="let skill of skills" (removed)="remove(skill)" [editable]="true"
+                            (edited)="edit(skill, $event)" [aria-description]="'press enter to edit ' + skill.skills">
+                            {{skill.skills}}
+                            <button matChipRemove [attr.aria-label]="'remove ' + skill.skills">
+                                <mat-icon>cancel</mat-icon>
+                            </button>
+                        </mat-chip-row>
+                        <input placeholder="Add Skill..." [matChipInputFor]="chipGrid"
+                            [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                            (matChipInputTokenEnd)="add($event)" />
+                    </mat-chip-grid>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row r r9">
+            <div class="col-sm-6 c">
+                <mat-dialog-actions align="start">
+                    <button mat-button mat-dialog-close>Cancel</button>
+                </mat-dialog-actions>
+            </div>
+            <div class="col-sm-6 c">
+                <mat-dialog-actions align="end">
+                    <button mat-button [mat-dialog-close]="true">Apply</button>
+                </mat-dialog-actions>
+            </div>
+        </div>
+    </div>
+</form>

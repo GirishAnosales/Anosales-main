@@ -1,0 +1,62 @@
+@import '../../../styles/theme.scss';
+@import '../../../styles/keyframes.scss';
+
+@media screen and (min-width:0px) {
+    .home {
+        background-color: $primary100;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        box-shadow: 0px 0px 16px 1px #00000020;
+
+        .active {
+            border-bottom: 4px solid #000000;
+        }
+
+        .r1 {
+            .r1c1 {
+                padding: 0%;
+
+                .logo-img {
+                    background-color: $primary100;
+                    height: 80px;
+                    width: auto;
+                    padding: 1rem 2rem;
+                    border-bottom-right-radius: 1rem;
+                }
+            }
+
+            .r1c2 {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:600px) {
+    .home {
+        .r1 {
+            .r1c1 {
+                .h1 {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:960px) {
+    .home {
+        .r1 {
+            .r1c2 {
+                .ng-container {
+                    .button {
+                        background-color: #FFE8D6;
+                    }
+                }
+            }
+        }
+    }
+}

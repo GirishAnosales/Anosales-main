@@ -1,0 +1,274 @@
+@import '../../styles/theme.scss';
+@import url('../../styles/keyframes.scss');
+
+@media screen and (min-width:0px) {
+    .home {
+        .nav-row {
+            display: none;
+
+            .nav-col {
+                .button-group {
+                    display: flex;
+                    flex-direction: column;
+
+                    .button {
+                        position: fixed;
+                        right: 0;
+                        z-index: 3;
+                        background-color: $secondary0;
+                        width: 4px !important;
+                        height: 12px !important;
+                        transition: 0.3s;
+                        box-shadow: 0px 0px 0px 0px $primary0;
+                        border-radius: 50%;
+                        border: none;
+                    }
+
+                    .button:hover {
+                        transition: 0.5s;
+                        box-shadow: 0px 0px 0px 4px $primary0;
+
+                        .text {
+                            display: contents;
+                            color: $primary0;
+                        }
+                    }
+
+                    .b1 {
+                        bottom: 70%;
+                    }
+
+                    .b2 {
+                        bottom: 65%;
+                    }
+
+                    .b3 {
+                        bottom: 60%;
+                    }
+
+                    .b4 {
+                        bottom: 55%;
+                    }
+
+                    .b5 {
+                        bottom: 50%;
+                    }
+
+                    .b6 {
+                        bottom: 45%;
+                    }
+
+                    .b7 {
+                        bottom: 40%;
+                    }
+
+                    .b8 {
+                        bottom: 35%;
+                    }
+
+                    .b9 {
+                        bottom: 30%;
+                    }
+                }
+            }
+        }
+
+        .r1 {
+            min-height: 100vh;
+            background-image: url("../../../assets/images/background/1.jpg");
+            background-size: cover;
+            background-position: center center;
+
+            .r1c1 {
+                background-color: $secondary70;
+                opacity: 80%;
+            }
+
+            .r1c2 {
+                background-color: $primary40;
+                opacity: 80%;
+            }
+
+            .tagline {
+                height: 100%;
+                position: absolute;
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+
+                .h1 {
+                    font-size: 32px;
+                    font-weight: bold;
+                    margin: 0%;
+                }
+
+                .h1-1 {
+                    color: $primary0;
+                }
+
+                .h1-2 {
+                    color: $primary100;
+                }
+            }
+        }
+
+        .r2 {
+            .r2c1 {
+                padding: 0;
+            }
+        }
+
+        .r3,
+        .r4,
+        .r5,
+        .r6,
+        .r7 {
+            display: flex;
+            justify-content: center;
+
+            .r3c2 {
+                display: flex;
+                justify-content: center;
+                padding: 1rem;
+
+                >.h5 {
+                    background: $color-yellow;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    font-weight: bold;
+                    color: $secondary98;
+                    text-align: center;
+                    text-transform: uppercase;
+                    width: 90%;
+                }
+            }
+
+            .mat-card {
+                background: $primary99;
+                box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                margin: 1rem;
+
+                .mat-card-content {
+                    height: 128px;
+                    overflow: hidden;
+
+                    .p {
+                        padding: 2rem 1rem;
+                    }
+                }
+
+                .mat-card-actions {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem;
+
+                    .h6 {
+                        margin: 0;
+                        font-weight: bold;
+                    }
+
+                    .mat-button {
+                        background: $primary10;
+                        color: $primary100;
+                        transition: 0.3s;
+                    }
+
+                    .mat-button:hover {
+                        box-shadow: 2px 2px 0px 1px $secondary70;
+                        color: $secondary80;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:960px) {
+    .home {
+        .nav-row {
+            display: contents;
+
+            .nav-col {
+                .button-group {
+                    .button {
+                        margin: 1rem;
+                    }
+                }
+            }
+        }
+
+        .r1 {
+            .tagline {
+                height: 100%;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .h1 {
+                    font-size: 80px;
+                    font-weight: bold;
+                    margin: 0%;
+                    width: 50%;
+                    white-space: normal;
+                }
+
+                .h1-1 {
+                    color: $primary0;
+                    text-align: start;
+                }
+
+                .h1-2 {
+                    color: $primary100;
+                    text-align: end;
+                }
+            }
+        }
+
+        .r3,
+        .r4,
+        .r5,
+        .r6,
+        .r7 {
+
+            .r3c2 {
+                padding: 3rem 5rem 3rem 5rem;
+                justify-content: flex-start;
+
+                >.h5 {
+                    min-width: 300px;
+                    width: max-content;
+                }
+            }
+
+            .padding-top {
+                padding-top: 5rem;
+            }
+
+            .mat-card {
+                margin: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .home {
+
+        .r3,
+        .r4,
+        .r5,
+        .r6,
+        .r7 {
+            .mat-card {
+                margin: 1rem 4rem 4rem 4rem;
+            }
+        }
+    }
+}

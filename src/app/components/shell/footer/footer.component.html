@@ -1,0 +1,77 @@
+<div class="container-fluid home" *ngIf="!(isSmallXSmall | async)">
+
+    <div class="row r1">
+        <!-- <div class="col-sm-3 r1c1">
+            <h6 class="h6">What we provide?</h6>
+            <a *ngFor="let data of services_url" [routerLink]="data.link" (click)="onClick()" class="a">
+                <h6 class="h6">{{data.title}}</h6>
+            </a>
+        </div> -->
+
+        <div class="col-sm-3 r1c1">
+            <h6 class="h6">What we provide?</h6>
+            <mat-tree class="mat-tree" [dataSource]="dataSource" [treeControl]="treeControl">
+                <mat-tree-node class="mat-tree-node" *matTreeNodeDef="let node" matTreeNodePadding>
+                    <a class="a" [routerLink]="[node.link]" (click)="onClick()">{{node.name}}</a>
+                </mat-tree-node>
+                <mat-tree-node class="mat-tree-node" *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+                    <button class="button" mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                        <mat-icon class="mat-icon-rtl-mirror">
+                            {{ treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right' }}
+                        </mat-icon>
+                    </button>
+                    <p class="p">{{ node.name }}</p>
+                </mat-tree-node>
+            </mat-tree>
+        </div>
+
+        <div class="col-sm-3 r1c2">
+            <h6 class="h6">Easy Support</h6>
+            <a routerLink="contact" (click)="onClick()" class="a">
+                <h6 class="h6">Contact</h6>
+            </a>
+            <a routerLink="privacy-policy" (click)="onClick()" class="a">
+                <h6 class="h6">Privacy Policy</h6>
+            </a>
+            <a routerLink="do-not-sell-my-information" (click)="onClick()" class="a">
+                <h6 class="h6">Do not sell my information</h6>
+            </a>
+            <a routerLink="terms-and-conditions" (click)="onClick()" class="a">
+                <h6 class="h6">Terms & Conditions</h6>
+            </a>
+        </div>
+
+        <div class="col-sm-3 r1c3">
+            <h6 class="h6">Opportunities</h6>
+            <a routerLink="about" (click)="onClick()" class="a">
+                <h6 class="h6">About Us</h6>
+            </a>
+            <a routerLink="careers" (click)="onClick()" class="a">
+                <h6 class="h6">Careers</h6>
+            </a>
+        </div>
+    </div>
+
+    <div class="row r2">
+        <div class="col-sm-12 r2c1">
+            <div class="social-media-icons">
+                <a class="social-media-links" target="_blank" href="https://www.linkedin.com/company/anosales/">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a class="social-media-links" target="_blank" href="https://www.facebook.com/anosales/">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a class="social-media-links" target="_blank" href="https://twitter.com/anosales">
+                    <i class="bi bi-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row r3">
+        <div class="col-sm-12 r3c1">
+            <h6 class="h6">Copyright Anosales LLC © 2016 - 2023</h6>
+        </div>
+    </div>
+
+</div>

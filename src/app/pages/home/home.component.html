@@ -1,0 +1,167 @@
+<div class="container-fluid home">
+
+    <!-- Intro -->
+    <div class="row r1" id="r1" #r1>
+        <div class="col-sm-6 r1c1"></div>
+        <div class="col-sm-6 r1c2"></div>
+        <div class="tagline">
+            <h1 class="h1 h1-1">MAKING CONNECTIONS</h1>
+            <h1 class="h1 h1-2">DELIVERING RESULTS</h1>
+        </div>
+    </div>
+
+    <!-- Right nav buttons -->
+    <div class="row nav-row">
+        <div class="col-sm-12 nav-col">
+            <div class="button-group">
+                <button class="button b1" (click)="scrollToSection('r1')" matTooltip="Top" matTooltipPosition="left">
+                </button>
+                <button class="button b2" (click)="scrollToSection('r2')" matTooltip="Company Stats"
+                    matTooltipPosition="left">
+                </button>
+                <button class="button b3" (click)="scrollToSection('r3')" matTooltip="Account Based Marketing"
+                    matTooltipPosition="left">
+                </button>
+                <button class="button b4" (click)="scrollToSection('r4')" matTooltip="Appointment Generation"
+                    matTooltipPosition="left">
+                </button>
+                <button class="button b5" (click)="scrollToSection('r5')" matTooltip="Content"
+                    matTooltipPosition="left">
+                </button>
+                <button class="button b6" (click)="scrollToSection('r6')" matTooltip="Data Management Solutions"
+                    matTooltipPosition="left">
+                </button>
+                <button class="button b7" (click)="scrollToSection('r7')" matTooltip="Intent Marketing"
+                    matTooltipPosition="left">
+                </button>
+                <button class="button b8" (click)="scrollToSection('r8')" matTooltip="Industries we work with"
+                    matTooltipPosition="left">
+                </button>
+                <button class="button b9" (click)="scrollToSection('r9')" matTooltip="Testimonials"
+                    matTooltipPosition="left">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats counter -->
+    <div class="row r2" id="r2" #r2>
+        <div class="col-sm-12 r2c1">
+            <app-stats-counter></app-stats-counter>
+        </div>
+    </div>
+
+    <!-- Account based marketing -->
+    <div class="row r3" id="r3" #r3>
+        <div class="col-lg-12 r3c2">
+            <h5 class="h5 ">{{accountBasedMarketingData[0].service_name}}</h5>
+        </div>
+        <div class="col-lg-4 r3c1" *ngFor="let data of accountBasedMarketingData">
+            <mat-card class="mat-card">
+                <img mat-card-image [src]="data.imageUrl" [alt]="data.service_name">
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content_block1.content_group[0].content}}</p>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions">
+                    <h6 class="h6">{{data.service_name}}</h6>
+                    <button class="mat-button" [routerLink]="data.routerLinkURL" (click)="onClick()" mat-button
+                        [matTooltip]="data.mat_tool_tip" matTooltipPosition="below">{{data.button_name}}</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- Appointment generation -->
+    <div class="row r4" id="r4" #r4>
+        <div class="col-lg-12 r3c2">
+            <h5 class="h5 ">{{appointmentGenerationData[0].service_name}}</h5>
+        </div>
+        <div class="col-lg-4 r4c1" *ngFor="let data of appointmentGenerationData">
+            <mat-card class="mat-card">
+                <img mat-card-image [src]="data.imageUrl" [alt]="data.service_name">
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content_block1.content_group[0].content}}</p>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions">
+                    <h6 class="h6">{{data.service_name}}</h6>
+                    <button class="mat-button" [routerLink]="data.routerLinkURL" (click)="onClick()" mat-button
+                        [matTooltip]="data.mat_tool_tip" matTooltipPosition="below">{{data.button_name}}</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="row r5" id="r5" #r5>
+        <div class="col-lg-12 r3c2">
+            <h5 class="h5 ">{{contentData[0].name}}</h5>
+        </div>
+        <div class="col-lg-4 r5c1" *ngFor="let data of contentData">
+            <mat-card class="mat-card">
+                <img mat-card-image [src]="data.imageUrl" [alt]="data.service_name">
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content}}</p>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions">
+                    <h6 class="h6">{{data.service_name}}</h6>
+                    <button class="mat-button" [routerLink]="data.routerLinkURL" (click)="onClick()" mat-button
+                        [matTooltip]="data.mat_tool_tip" matTooltipPosition="below">{{data.button_name}}</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- Data management solutions -->
+    <div class="row r6" id="r6" #r6>
+        <div class="col-lg-12 r3c2">
+            <h5 class="h5 ">{{dataManagementSolutionsData[0].name}}</h5>
+        </div>
+        <div class="col-lg-4 r6c1" *ngFor="let data of dataManagementSolutionsData">
+            <mat-card class="mat-card">
+                <img mat-card-image [src]="data.imageUrl" [alt]="data.service_name">
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content_block1.content0}}</p>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions">
+                    <h6 class="h6">{{data.service_name}}</h6>
+                    <button class="mat-button" [routerLink]="data.routerLinkURL" (click)="onClick()" mat-button
+                        [matTooltip]="data.mat_tool_tip" matTooltipPosition="below">{{data.button_name}}</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- Intent Marketing -->
+    <div class="row r7" id="r7" #r7>
+        <div class="col-lg-12 r3c2">
+            <h5 class="h5 ">{{intentMarketingData[0].name}}</h5>
+        </div>
+        <div class="col-lg-4 r7c1" *ngFor="let data of intentMarketingData">
+            <mat-card class="mat-card">
+                <img mat-card-image [src]="data.imageUrl" [alt]="data.service_name">
+                <mat-card-content class="mat-card-content">
+                    <p class="p">{{data.content_block1.content0}}</p>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions">
+                    <h6 class="h6">{{data.service_name}}</h6>
+                    <button class="mat-button" [routerLink]="data.routerLinkURL" (click)="onClick()" mat-button
+                        [matTooltip]="data.mat_tool_tip" matTooltipPosition="below">{{data.button_name}}</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- Industries we work with -->
+    <div class="row r8" id="r8" #r8>
+        <div class="col-sm-12">
+            <app-industries-we-work-with></app-industries-we-work-with>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="row r9" id="r9" #r9>
+        <div class="col-sm-12">
+            <app-testimonials></app-testimonials>
+        </div>
+    </div>
+</div>

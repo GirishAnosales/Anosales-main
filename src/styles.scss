@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+@font-face {
+    font-family: RedHatDisplay;
+    src: url('./assets/Fonts/RedHatDisplay/RedHatDisplay-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: RedHatDisplayItalic;
+    src: url('./assets/Fonts/RedHatDisplay/RedHatDisplay-Italic-VariableFont_wght.ttf');
+}
+
+* {
+    font-family: RedHatDisplay;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 !important;
+    padding: 1rem;
+}
