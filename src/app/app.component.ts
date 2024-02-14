@@ -31,6 +31,16 @@ export class AppComponent {
 				'page-path': event.urlAfterRedirects
 			  })
 			});
+
+			const routeChange1 = router.events
+			.pipe(
+			  filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+			)
+			.subscribe(event => {
+			  gtag('config', 'G-ZSGRGZ8K16', {
+				'page-path': event.urlAfterRedirects
+			  })
+			});
 		
 	  }
 
